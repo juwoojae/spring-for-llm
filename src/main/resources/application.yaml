@@ -4,3 +4,14 @@ spring:
   ai:
     openai:
       api-key: ${OPENAI_API_KEY}
+      chat:
+        # 사용할 OpenAI LLM 모델 지정
+        model: gpt-4o-mini
+
+        # 응답의 무작위성 조절 (0.0~2.0)
+        # 낮을수록 일관되고 예측 가능한 응답 생성
+        temperature: 0.1
+
+        # 모델이 생성할 수 있는 최대 출력 토큰 수
+        # 입력 토큰은 포함하지 않음
+        max-tokens: 500
